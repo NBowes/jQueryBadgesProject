@@ -3,6 +3,7 @@ $(function() {
       url: 'https://www.codeschool.com/users/NBowes.json',
       dataType: 'jsonp',
       success: function(response){
+        console.log(response);
         addCourse(response.courses.completed);
       }
     });
@@ -14,9 +15,8 @@ $(function() {
             $('<h3 />').text(course.title).appendTo($course);
             $('<img />').attr('src',course.badge).appendTo($course);
             $('<a />').text("See Course").addClass('btn btn-primary')
-                                       .attr('href', course.url,
-                                              'target','_blank')
-                                       .appendTo($course);
+            .attr('href', course.url,'target','_blank')
+            .appendTo($course);
         });
 
     }
