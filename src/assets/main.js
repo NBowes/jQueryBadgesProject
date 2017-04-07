@@ -3,7 +3,6 @@ $(function() {
       url: 'https://www.codeschool.com/users/NBowes.json',
       dataType: 'jsonp',
       success: function(response){
-        console.log(response.courses.completed);
         addCourse(response.courses.completed);
       }
     });
